@@ -2,6 +2,7 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 const PREFIX = 'rs!';
 const ping = require('minecraft-server-util') 
+const version = 1.0
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
@@ -33,6 +34,23 @@ client.on('message', msg => {
   }
 
 });
+
+client.on('message', msg => {
+  let args = msg.content.substring(PREFIX.length).split(" ");
+
+  switch(args[0]){
+    case serverinfo:
+      const Embed = new Discord.RichEmbed()
+      .setTitle('Server Info')
+      .addField('Server Name', msg.guild.name)
+      .addField('Server Version', version)
+      .addField('Your Name', msg.user.name)
+      .setColor(0xF1C40F)
+      msg.channel.sendEmbed(Embed);
+    break;
+  }
+
+})
 
 client.on('message', msg => {
   let args = msg.content.substring(PREFIX.length).split(" ");
