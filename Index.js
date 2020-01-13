@@ -46,23 +46,14 @@ client.on('message', msg => {
 });
 
 client.on('message', msg => {
-  let args = msg.content.substring(PREFIX.length).split(' ');
-  
-  switch (args[0]){
-    case 'hypixel':
+  let args = msg.content.substring(PREFIX.length).split(" ");
 
-      ping('hypixel.net', 25565, (error, Response) => {
-        if(error) throw error;
-        msg.channel.send(new RichEmbed()
-        .setTitle('Hypixel Server Status')
-        .addField('Server IP', Response.host)
-        .addField('Server Version', Response.version)
-        .addField('Online Players', Response.onlinePlayers )
-        .addField('Max Players', Response.maxPlayers))
-      });
+  switch (args[0]) {
+    case bestyt:
+      msg.channel.send('Sub to puppygamerty! His Channel: https://www.youtube.com/channel/UC-QLWvMsR88v6w8WjCadYQQ?view_as=subscriber')
     break;
   }
-});
+})
 
 
 
