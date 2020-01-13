@@ -39,7 +39,7 @@ client.on('message', msg => {
   let args = msg.content.substring(PREFIX.length).split(" ");
 
   switch(args[0]){
-    case 'serverinfo':
+    case 'info':
       const Embed = new Discord.RichEmbed()
       .setTitle('User Info')
       .addField('User Name', msg.author.name)
