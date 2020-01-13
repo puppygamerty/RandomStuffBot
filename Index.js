@@ -33,6 +33,16 @@ client.on('message', msg => {
 
 });
 
+client.on('message', msg => {
+  let args = msg.content.substring(PREFIX.length).split(" ");
+
+  switch (args[0]) {
+    case 'delta':
+      msg.channel.send('Sub to Delta Eclipse! Her Channel: https://www.youtube.com/channel/UCWKcJDvVZoQ9npsI9YmdUBg');
+    break;
+  }
+
+});
 
 
 
