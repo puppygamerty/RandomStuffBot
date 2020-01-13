@@ -53,13 +53,12 @@ client.on('message', msg => {
 
       ping('hypixel.net', 25565, (error, Response) => {
         if(error) throw error;
-        const Embed = new RichEmbed()
+        msg.channel.send(new RichEmbed()
         .setTitle('Hypixel Server Status')
         .addField('Server IP', Response.host)
         .addField('Server Version', Response.version)
         .addField('Online Players', Response.onlinePlayers )
-        .addField('Max Players', Response.maxPlayers)
-        msg.channel.send(Embed)
+        .addField('Max Players', Response.maxPlayers))
       });
     break;
   }
