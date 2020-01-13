@@ -44,7 +44,6 @@ client.on('message', msg => {
       .setTitle('Server Info')
       .addField('Server Name', msg.guild.name)
       .addField('Server Version', version)
-      .addField('Your Name', msg.user.name)
       .setColor(0xF1C40F)
       msg.channel.sendEmbed(Embed);
     break;
