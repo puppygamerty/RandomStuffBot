@@ -39,7 +39,7 @@ client.on('message', msg => {
   let args = msg.content.substring(PREFIX.length).split(" ");
 
   switch(args[0]){
-    case serverinfo:
+    case 'serverinfo':
       const Embed = new Discord.RichEmbed()
       .setTitle('Server Info')
       .addField('Server Name', msg.guild.name)
