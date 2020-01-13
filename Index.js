@@ -27,7 +27,7 @@ client.on('message', msg => {
 
   switch (args[0]) {
     case 'ily':
-      msg.reply(':D');
+      msg.channel.send(':D');
     break;
   }
 
