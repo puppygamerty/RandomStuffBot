@@ -3,7 +3,6 @@ const client = new Discord.Client();
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
-  client.user.setActivity('Noah Sleeping', {type: 'WATCHING'}).catch(console.error);
 });
 
 client.on('guildMemberAdd', member => {
