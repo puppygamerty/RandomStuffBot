@@ -26,26 +26,8 @@ client.on('message', msg => {
   let args = msg.content.substring(PREFIX.length).split(" ");
 
   switch (args[0]) {
-    case 'kick':
-      if (!args[1]) msg.channel.send('Please Specify a user! Example rs!kick @Random Stuff!#4554')
-
-      const user = msg.mentions.users.first();
-      if(user){
-        const member = member.guild.member(user);
-
-        if(member){
-          member.kick('You Were Kicked from Random Stuff! What did you do this time :3!').then(() => {
-            msg.reply(`Kicked user, ${user.tag}`)
-          }).catch(err => {
-            MessageChannel.reply(`Unable to kick member!`)
-            console.log(err);
-          });
-        }else{
-          msg.reply("That user isn\'t in the server, silly!")
-        }
-      }else{
-        msg.reply("That user isn\'t in the server, silly!")
-      }
+    case 'ily':
+      msg.reply(':D');
     break;
   }
 
