@@ -1,6 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const PREFIX = 'rs!';
+const ping = require('minecraft-server-util') 
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
@@ -44,7 +45,25 @@ client.on('message', msg => {
 
 });
 
+client.on('message', msg => {
+  let args = msg.content.substring(PREFIX.length).split(' ');
+  
+  switch (args[0]){
+    case 'hypixel':
 
+      ping('hypixel.net', 25565, (error, Response) => {
+        if(error) throw error;
+        const Embed = new RichEmbed()
+        .setTitle('Hypixel Server Status')
+        .addField('Server IP', Response.host)
+        .addField('Server Version', Response.version)
+        .addField('Online Players', Response.onlinePlayers )
+        .addField('Max Players', Response.maxPlayers)
+        msg.channel.send(Embed)
+      });
+    break;
+  }
+});
 
 
 
