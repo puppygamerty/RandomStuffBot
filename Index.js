@@ -45,15 +45,7 @@ client.on('message', msg => {
 
 });
 
-client.on('message', msg => {
-  let args = msg.content.substring(PREFIX.length).split(" ");
 
-  switch (args[0]) {
-    case bestyt:
-      msg.channel.send('Sub to puppygamerty! His Channel: https://www.youtube.com/channel/UC-QLWvMsR88v6w8WjCadYQQ?view_as=subscriber')
-    break;
-  }
-});
 
 
 
