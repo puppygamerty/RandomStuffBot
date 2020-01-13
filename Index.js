@@ -53,7 +53,7 @@ client.on('message', msg => {
       msg.channel.send('Sub to puppygamerty! His Channel: https://www.youtube.com/channel/UC-QLWvMsR88v6w8WjCadYQQ?view_as=subscriber')
     break;
   }
-})
+});
 
 
 
