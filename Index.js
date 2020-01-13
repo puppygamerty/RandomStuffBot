@@ -41,10 +41,12 @@ client.on('message', msg => {
   switch(args[0]){
     case 'serverinfo':
       const Embed = new Discord.RichEmbed()
-      .setTitle('Server Info')
-      .addField('Server Name', msg.guild.name)
+      .setTitle('User Info')
+      .addField('User Name', msg.author.name)
+      .addField('Current Server', msg.guild.name)
       .addField('Server Version', version)
       .setColor(0xF1C40F)
+      .setThumbnail(msg.author.avatarURL)
       msg.channel.sendEmbed(Embed);
     break;
   }
