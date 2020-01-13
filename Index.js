@@ -18,7 +18,7 @@ client.on('guildMemberAdd', member => {
 
 client.on('message', msg => {
   if (msg.content === 'ping') {
-    msg.channel.send('@everyone');
+    msg.channel.send('No u kiddo!');
   }
 });
 
