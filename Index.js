@@ -42,7 +42,7 @@ client.on('message', msg => {
     case 'info':
       const Embed = new Discord.RichEmbed()
       .setTitle('User Info')
-      .addField('User Name', msg.author)
+      .addField('User Name', msg.author.username)
       .addField('Current Server', msg.guild.name)
       .addField('Server Version', version)
       .setColor(0xF1C40F)
