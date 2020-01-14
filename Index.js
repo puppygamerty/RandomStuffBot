@@ -16,6 +16,12 @@ client.on('guildMemberAdd', member => {
     channel.send(`Welcome To Random Stuff, ${member}, Read Rules in #rules cutie :3!`)
 });
 
+client.on('guildMemberRemove', member => {
+  const channel = member.guild.channels.find(channel => channel.name === "welcome");
+  if (!channel) return;
+
+  channel.send(`Oh! ${member} Decided to Leave >:(. Well, RIP.`)
+})
 
 client.on('message', msg => {
   if (msg.content === 'ping') {
