@@ -12,8 +12,16 @@ client.on('ready', () => {
 client.on('guildMemberAdd', member => {
     const channel = member.guild.channels.find(channel => channel.name === "welcome");
     if (!channel) return;
+    
+    const EmbedWelcome = new Discord.RichEmbed()
+    .setTitle('New Member')
+    .addField('User', member.username)
+    .addField('Server', member.guild)
+    .setThumbnail(member.avatarURL)
+    .setColor(0xF1C40F)
+    .setFooter('Welcome to Random Stuff! We hope you have a good time!')
 
-    channel.send(`Welcome To Random Stuff, ${member}, Read Rules in #rules cutie :3!`)
+    channel.send(EmbedWelcome)
 });
 
 client.on('guildMemberRemove', member => {
