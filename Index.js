@@ -18,7 +18,7 @@ client.on('guildMemberAdd', member => {
     .addField('User', member.displayName)
     .addField('Server', member.guild)
     .setThumbnail(member.user.avatarURL)
-    .setColor(0xF1C40F)
+    .setColor(0x34C3ED)
     .setFooter('Welcome to Random Stuff! We hope you have a good time!')
 
     channel.send(EmbedWelcome)
