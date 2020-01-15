@@ -17,7 +17,7 @@ client.on('guildMemberAdd', member => {
     .setTitle('New Member')
     .addField('User', member.displayName)
     .addField('Server', member.guild)
-    .setThumbnail(member.avatarURL)
+    .setThumbnail(member.user.avatarURL)
     .setColor(0xF1C40F)
     .setFooter('Welcome to Random Stuff! We hope you have a good time!')
 
