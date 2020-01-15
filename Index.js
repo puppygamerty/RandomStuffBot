@@ -6,7 +6,7 @@ const version = 1.0
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
-  client.user.setActivity('Noah Sleeping', { type: "WATCHING"}).catch(console.error);
+  client.user.setActivity('with a switchblade', { type: "PLAYING"}).catch(console.error);
 });
 
 client.on('guildMemberAdd', member => {
@@ -36,6 +36,13 @@ client.on('message', msg => {
     msg.channel.send('No u kiddo!');
   }
 });
+
+client.on('message', msg => {
+  if (msg.content === 'pig'){
+    msg.channel.send('🐷')
+    msg.delete
+  }
+})
 
 
 client.on('message', msg => {
