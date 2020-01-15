@@ -44,6 +44,13 @@ client.on('message', msg => {
   }
 })
 
+client.on('message', msg =>{
+  const mbschannel = msg.author.guild.channels.find(channel => channel.name === "make-the-bot-say")
+
+  var botmsg = msg.content
+  msg.delete (0)
+  channel.send(botmsg)
+})
 
 client.on('message', msg => {
   let args = msg.content.substring(PREFIX.length).split(" ");
