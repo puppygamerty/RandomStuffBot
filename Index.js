@@ -15,9 +15,9 @@ client.on('guildMemberAdd', member => {
     
     const EmbedWelcome = new Discord.RichEmbed()
     .setTitle('New Member')
-    .addField('User', member.username)
+    .addField('User', `${member}`)
     .addField('Server', member.guild)
-    .setThumbnail(member.avatarURL)
+    .setThumbnail(member.username.avatarURL)
     .setColor(0xF1C40F)
     .setFooter('Welcome to Random Stuff! We hope you have a good time!')
 
